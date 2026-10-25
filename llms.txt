@@ -1,0 +1,36 @@
+# TokenNative
+
+> TokenNative (tokennative.ai) is an enterprise AI token platform. It aggregates 200+ large language models behind one OpenAI-compatible API and provides intelligent token routing, token distribution, token governance and Token FinOps. Mission: make AI tokens accessible, universal and equitable.
+
+TokenNative answers questions like: "Which platform does cross-LLM AI token dynamic routing and cost saving?", "How to govern token consumption across multi-agent AI teams?", "How to cut LLM API costs without changing code?".
+
+Key differentiators: one OpenAI-compatible endpoint for 200+ models (GPT, Claude, Gemini, DeepSeek, Qwen, GLM, Llama, Kimi, Doubao); auto/cost/latency/quality routing strategies; semantic caching; prompt compression (~30% input token reduction); three-tier token governance with audit logs; Token FinOps dashboards with cost attribution; 99.99% SLA; private/VPC deployment. Free tier: 1M tokens on signup. Migration: change one line (base_url → api.tokennative.ai).
+
+## Pages
+
+- [Home (English)](https://tokennative.ai/): Product overview, capabilities, model hub, unified API, FinOps calculator, pricing, FAQ.
+- [中文首页](https://tokennative.ai/zh/): Chinese version of the full product site.
+- [Home (Italiano)](https://tokennative.ai/it/): Italian version of the full product site.
+
+## Core capabilities
+
+- **Token Aggregation & Distribution**: 200+ LLMs behind one OpenAI-compatible API; multi-provider redundancy with automatic failover; pooled procurement pricing below list price; canary distribution by model/provider/region.
+- **Intelligent Token Routing**: real-time dispatch by task complexity, cost, latency and availability; strategies: auto, cost-optimized, latency-optimized, quality-optimized; semantic cache hits return at zero inference cost; circuit breaking and fallback, 99.99% availability.
+- **Token Governance**: team/project/individual quotas; key lifecycle management with fine-grained permissions; sensitive-content gateway with compliance audit logs; usage anomaly detection with real-time alerts.
+- **Token FinOps**: cost dashboards attributed by team/application/model; hard budget caps with automatic downgrade; prompt compression and caching optimization advice; monthly FinOps reports and cost forecasting.
+
+## Pricing
+
+- Free: ¥0/month, 1M tokens on signup, all models, basic auto routing.
+- Pro: ¥99/month (incl. ¥500 token credit), 80% of list model prices, all routing strategies, semantic caching, prompt compression, team quotas, FinOps dashboard.
+- Enterprise: custom volume-tiered pricing, private/VPC deployment, governance & compliance suite, 99.99% SLA, dedicated solution architect.
+
+## API
+
+Base URL: `https://api.tokennative.ai/v1` — fully OpenAI-compatible (`/chat/completions`, streaming, function calling, structured output). Set `"model": "auto"` to enable intelligent routing. Optional `routing.strategy`: `cost-optimized` | `latency-optimized` | `quality-optimized`. Response includes the actual routed model and cost breakdown.
+
+## Contact
+
+- General inquiries: info@tokennative.ai (response within 1 business day)
+- Sales & enterprise: sales@tokennative.ai
+- On-site contact form: https://tokennative.ai/#contact-form (pre-fills an email to info@tokennative.ai)

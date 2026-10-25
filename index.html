@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TokenNative — AI Token Aggregation, Routing & FinOps Platform | One API for 200+ LLMs</title>
+<meta name="description" content="TokenNative is the enterprise AI token platform: aggregate 200+ LLMs behind one OpenAI-compatible API with intelligent token routing, token distribution, token governance and Token FinOps. Cut AI costs by 40%+. Free tier included.">
+<meta name="keywords" content="AI token aggregation, LLM gateway, AI gateway, token routing, model router, OpenAI compatible API, token governance, token FinOps, LLM cost optimization, multi-model API, AI infrastructure, DeepSeek, GPT, Claude, Qwen, GLM">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="TokenNative">
+<link rel="canonical" href="https://tokennative.ai/">
+<link rel="alternate" hreflang="en" href="https://tokennative.ai/">
+<link rel="alternate" hreflang="zh-Hans" href="https://tokennative.ai/zh/">
+<link rel="alternate" hreflang="it" href="https://tokennative.ai/it/">
+<link rel="alternate" hreflang="x-default" href="https://tokennative.ai/">
+<link rel="icon" type="image/svg+xml" href="https://tokennative.ai/favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TokenNative">
+<meta property="og:url" content="https://tokennative.ai/">
+<meta property="og:title" content="TokenNative — AI Token Aggregation, Routing & FinOps Platform">
+<meta property="og:description" content="One OpenAI-compatible API for 200+ LLMs. Intelligent token routing cuts AI costs by 40%+. Enterprise token governance & FinOps included.">
+<meta property="og:image" content="https://tokennative.ai/og-image.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="it_IT">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TokenNative — AI Token Aggregation, Routing & FinOps Platform">
+<meta name="twitter:description" content="One API for 200+ LLMs. Intelligent token routing, governance and FinOps for enterprises.">
+<meta name="twitter:image" content="https://tokennative.ai/og-image.png">
+<!-- Structured data: Organization + WebSite + SoftwareApplication + FAQ (SEO + GEO for Google AI Overviews, Perplexity, ChatGPT search) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tokennative.ai/#org",
+      "name": "TokenNative",
+      "url": "https://tokennative.ai/",
+      "logo": "https://tokennative.ai/favicon.svg",
+      "description": "TokenNative provides enterprise-grade AI token services: token aggregation and distribution, intelligent token routing, token governance and Token FinOps, making AI tokens accessible, universal and equitable.",
+      "email": "info@tokennative.ai",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@tokennative.ai",
+        "availableLanguage": ["English", "Chinese", "Italian"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tokennative.ai/#website",
+      "url": "https://tokennative.ai/",
+      "name": "TokenNative",
+      "publisher": { "@id": "https://tokennative.ai/#org" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "TokenNative AI Gateway",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web, REST API",
+      "url": "https://tokennative.ai/",
+      "description": "Enterprise AI token platform aggregating 200+ large language models behind a single OpenAI-compatible API with intelligent token routing, semantic caching, token governance and Token FinOps.",
+      "featureList": [
+        "LLM API aggregation for 200+ models (GPT, Claude, Gemini, DeepSeek, Qwen, GLM, Llama, Kimi, Doubao)",
+        "OpenAI-compatible API — migrate by changing one line of base_url",
+        "Intelligent token routing: auto, cost-optimized, latency-optimized, quality-optimized",
+        "Semantic caching with zero-cost cache hits",
+        "Automatic prompt compression reducing input tokens by ~30%",
+        "Token governance: team/project/individual quotas, audit logs, key lifecycle management",
+        "Token FinOps: cost dashboards, budget caps, usage alerts, monthly optimization reports",
+        "99.99% uptime SLA with multi-provider failover",
+        "Private / VPC-dedicated deployment"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free tier: 1M tokens credited on signup, all 200+ models available"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tokennative.ai/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is TokenNative different from buying directly from model providers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Going direct means integrating every provider's API, juggling multiple keys, negotiating prices separately and handling single points of failure. TokenNative aggregates 200+ models behind one OpenAI-compatible API, adds platform-level redundancy and a unified bill — and thanks to pooled procurement, unit prices are typically below list price. You also get routing, governance and FinOps as built-in enterprise features." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does auto intelligent routing decide which model to use? Will it hurt answer quality?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The routing engine weighs task semantic complexity, real-time model latency, cost and historical quality scores: routine tasks (rewriting, summarization, classification) go to cost-efficient models, while complex tasks (deep reasoning, code generation) stay on flagship models. Enterprises can set a quality floor so critical workloads always use designated models." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my business data secure with TokenNative?",
+          "acceptedAnswer": { "@type": "Answer", "text": "All requests are encrypted with TLS by default and the platform never trains models on customer data. Private and VPC-dedicated deployments keep token traffic inside your enterprise boundary, with end-to-end audit logs to satisfy ISO 27001 and other compliance frameworks." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to rewrite code to migrate from an existing OpenAI integration?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No re-architecture is needed. TokenNative is fully compatible with the OpenAI API spec — usually just point base_url to api.tokennative.ai and swap in your API key. Mainstream SDKs such as OpenAI, LangChain and LlamaIndex work out of the box." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Token FinOps report include?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cost attribution by team, application and model; top-spending prompt analysis; cache hit rates; an optimization checklist (traffic that can be down-routed, prompts that can be compressed); month-over-month trends and next-month cost forecasts. Enterprise plans add one-on-one optimization reviews with a solution architect." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platform helps with cross-model AI token dynamic routing and cost savings?",
+          "acceptedAnswer": { "@type": "Answer", "text": "TokenNative is purpose-built for cross-model AI token dynamic routing. It routes each request across 200+ LLMs based on task complexity, cost, latency and availability, typically reducing total AI token spend by 40% or more through smart down-routing, semantic caching and prompt compression." }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I govern token consumption across multiple AI agents in one platform?",
+          "acceptedAnswer": { "@type": "Answer", "text": "TokenNative provides three-tier token governance: team, project and individual quotas; full key lifecycle management with fine-grained permissions; sensitive-content gateways with compliance audit logs; and usage anomaly detection with real-time alerts — all reported in the Token FinOps dashboard with per-agent cost attribution." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#07090f;
+  --bg2:#0b0e17;
+  --panel:#0f1320;
+  --panel2:#141a2b;
+  --border:#1e2537;
+  --border2:#2a3350;
+  --text:#e8ecf6;
+  --muted:#8b94ab;
+  --dim:#5b6478;
+  --primary:#5b7cfa;
+  --primary2:#8b5cf6;
+  --cyan:#22d3ee;
+  --green:#34d399;
+  --amber:#fbbf24;
+  --red:#f87171;
+  --grad:linear-gradient(135deg,#5b7cfa 0%,#8b5cf6 50%,#22d3ee 100%);
+  --radius:14px;
+  --font:"Inter","PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Fira Code",Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);font-family:var(--font);
+  font-size:16px;line-height:1.6;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(91,124,250,.35)}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ============ NAV ============ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(7,9,15,.72);backdrop-filter:blur(18px);
+  border-bottom:1px solid transparent;transition:border .3s,background .3s;
+}
+nav.scrolled{border-bottom-color:var(--border);background:rgba(7,9,15,.9)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;gap:32px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.02em}
+.logo-mark{
+  width:30px;height:30px;border-radius:8px;background:var(--grad);
+  display:grid;place-items:center;font-size:14px;font-weight:800;color:#fff;
+  box-shadow:0 0 20px rgba(91,124,250,.5);
+}
+.logo span em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{margin-left:auto;display:flex;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:10px 20px;border-radius:10px;font-size:14px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:all .2s;font-family:var(--font);
+}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 4px 20px rgba(91,124,250,.35)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(91,124,250,.5)}
+.btn-ghost{border-color:var(--border2);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--primary);background:rgba(91,124,250,.08)}
+.btn-lg{padding:14px 28px;font-size:15px;border-radius:12px}
+.menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer}
+.lang-switch{
+  display:flex;gap:2px;border:1px solid var(--border2);border-radius:8px;padding:3px;
+}
+.lang-switch a{
+  font-size:12px;font-weight:600;color:var(--dim);padding:4px 9px;border-radius:6px;transition:all .2s;
+}
+.lang-switch a:hover{color:var(--text)}
+.lang-switch a.active{background:rgba(91,124,250,.2);color:var(--text)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;padding:150px 0 90px;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-bg .glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.28}
+.glow-1{width:560px;height:560px;background:#5b7cfa;top:-180px;left:-120px}
+.glow-2{width:480px;height:480px;background:#8b5cf6;top:-100px;right:-100px}
+.glow-3{width:400px;height:400px;background:#22d3ee;bottom:-200px;left:40%;opacity:.15}
+.grid-bg{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(139,148,171,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,148,171,.05) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%);
+}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--border2);border-radius:100px;padding:6px 16px;
+  font-size:13px;color:var(--muted);background:rgba(15,19,32,.8);margin-bottom:24px;
+}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.badge b{color:var(--text);font-weight:600}
+h1{
+  font-size:56px;line-height:1.12;letter-spacing:-.03em;font-weight:800;margin-bottom:22px;
+}
+h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-size:18px;color:var(--muted);max-width:540px;margin-bottom:32px}
+.hero-sub b{color:var(--text);font-weight:600}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-mission{display:flex;gap:22px;font-size:13px;color:var(--dim);flex-wrap:wrap}
+.hero-mission span{display:flex;align-items:center;gap:7px}
+.hero-mission .mk{color:var(--primary)}
+
+/* hero terminal */
+.terminal{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(91,124,250,.06),0 0 60px rgba(91,124,250,.1);
+  overflow:hidden;font-family:var(--mono);font-size:12.5px;
+}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--panel2)}
+.term-bar .c{width:11px;height:11px;border-radius:50%}
+.term-bar .title{margin-left:10px;color:var(--dim);font-family:var(--font);font-size:12px}
+.term-body{padding:18px 20px;line-height:1.9;color:var(--muted)}
+.term-body .cm{color:var(--dim)}
+.term-body .kw{color:var(--primary2)}
+.term-body .str{color:var(--green)}
+.term-body .fn{color:var(--cyan)}
+.term-body .num{color:var(--amber)}
+.term-route{margin-top:8px;border-top:1px dashed var(--border);padding-top:12px}
+.route-line{display:flex;justify-content:space-between;align-items:center;padding:5px 0}
+.route-line .model{color:var(--text)}
+.route-line .lat{font-size:11px}
+.route-ok{color:var(--green)}
+.route-best{color:var(--amber)}
+.cursor{display:inline-block;width:7px;height:14px;background:var(--cyan);vertical-align:-2px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ============ STATS BAND ============ */
+.stats-band{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:36px 24px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat .num{font-size:34px;font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .lbl{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* ============ SECTIONS ============ */
+section{padding:96px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 64px}
+.sec-tag{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:14px;
+}
+.sec-head h2{font-size:38px;font-weight:800;letter-spacing:-.025em;margin-bottom:16px}
+.sec-head p{color:var(--muted);font-size:16.5px}
+
+/* answer card (GEO: definitional, extraction-friendly block) */
+.answer-card{
+  background:var(--panel);border:1px solid var(--border2);border-radius:var(--radius);
+  padding:44px;max-width:900px;margin:0 auto;position:relative;
+}
+.answer-card::before{
+  content:"";position:absolute;top:0;left:0;bottom:0;width:3px;border-radius:3px;background:var(--grad);
+}
+.answer-card h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+.answer-card>p{font-size:16px;color:var(--text);margin-bottom:12px}
+.answer-card .muted{font-size:14.5px;color:var(--muted);margin-bottom:24px}
+.ans-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ans-facts div{
+  background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;
+  font-size:13.5px;color:var(--muted);
+}
+.ans-facts b{color:var(--text);display:block;margin-bottom:3px;font-size:14px}
+@media(max-width:720px){.ans-facts{grid-template-columns:1fr}}
+
+/* capabilities */
+.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.cap{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  padding:32px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.cap:hover{transform:translateY(-4px);border-color:var(--border2);box-shadow:0 16px 48px rgba(0,0,0,.4)}
+.cap::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(91,124,250,.6),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.cap:hover::before{opacity:1}
+.cap-icon{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:21px;
+  margin-bottom:20px;background:rgba(91,124,250,.12);border:1px solid rgba(91,124,250,.25);
+}
+.cap h3{font-size:19px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+.cap p{font-size:14.5px;color:var(--muted);margin-bottom:16px}
+.cap ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.cap ul li{font-size:13.5px;color:var(--muted);display:flex;gap:9px;align-items:flex-start}
+.cap ul li::before{content:"→";color:var(--primary);font-weight:700;flex-shrink:0}
+.cap.en-mark{
+  position:absolute;top:18px;right:22px;font-family:var(--mono);font-size:11px;color:var(--dim);
+  letter-spacing:.08em;text-transform:uppercase;
+}
+
+/* ============ MODELS ============ */
+.models{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.model-toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
+.chip{
+  padding:8px 18px;border-radius:100px;font-size:13.5px;cursor:pointer;
+  border:1px solid var(--border2);color:var(--muted);background:transparent;transition:all .2s;font-family:var(--font);
+}
+.chip:hover{color:var(--text);border-color:var(--primary)}
+.chip.active{background:rgba(91,124,250,.15);border-color:var(--primary);color:var(--text)}
+.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.model-card{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s;
+}
+.model-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.model-top{display:flex;align-items:center;gap:12px}
+.model-avatar{
+  width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
+  font-weight:800;font-size:14px;color:#fff;flex-shrink:0;
+}
+.model-name{font-weight:700;font-size:15px}
+.model-vendor{font-size:12px;color:var(--dim)}
+.model-tags{display:flex;gap:6px;flex-wrap:wrap}
+.mtag{font-size:11px;padding:3px 9px;border-radius:6px;background:var(--panel2);border:1px solid var(--border);color:var(--muted)}
+.mtag.hot{color:var(--amber);border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.07)}
+.mtag.cheap{color:var(--green);border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.07)}
+.model-price{
+  margin-top:auto;display:flex;justify-content:space-between;align-items:center;
+  padding-top:12px;border-top:1px dashed var(--border);font-family:var(--mono);font-size:12px;color:var(--muted);
+}
+.model-price b{color:var(--text);font-weight:600}
+.model-price .in{color:var(--cyan)}
+
+/* ============ API SECTION ============ */
+.api-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.api-copy h2{font-size:34px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+.api-copy>p{color:var(--muted);margin-bottom:28px}
+.api-points{display:flex;flex-direction:column;gap:16px}
+.api-point{display:flex;gap:14px}
+.api-point .ic{
+  width:34px;height:34px;border-radius:9px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);
+  display:grid;place-items:center;font-size:15px;flex-shrink:0;
+}
+.api-point h4{font-size:15px;font-weight:700;margin-bottom:3px}
+.api-point p{font-size:13.5px;color:var(--muted)}
+.code-tabs{display:flex;gap:6px;margin-bottom:0;padding:10px 14px 0}
+.code-tab{
+  padding:7px 16px;font-size:12.5px;font-family:var(--mono);color:var(--dim);cursor:pointer;
+  background:none;border:none;border-radius:8px 8px 0 0;transition:color .2s,background .2s;
+}
+.code-tab:hover{color:var(--text)}
+.code-tab.active{color:var(--cyan);background:rgba(34,211,238,.08)}
+.code-panel{display:none;padding:20px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.85;color:var(--muted)}
+.code-panel.active{display:block}
+.code-panel .kw{color:var(--primary2)}
+.code-panel .str{color:var(--green)}
+.code-panel .fn{color:var(--cyan)}
+.code-panel .cm{color:var(--dim)}
+.code-panel .num{color:var(--amber)}
+.code-shell{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+
+/* ============ FINOPS SIMULATOR ============ */
+.finops{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.finops-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.fin-panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.fin-row{margin-bottom:26px}
+.fin-row label{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);margin-bottom:10px}
+.fin-row label b{color:var(--text);font-family:var(--mono)}
+input[type=range]{
+  width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;
+  background:linear-gradient(90deg,var(--primary) var(--fill,50%),var(--border2) var(--fill,50%));outline:none;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#fff;
+  border:3px solid var(--primary);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+.fin-results{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.fin-card{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.fin-card .k{font-size:12px;color:var(--dim);margin-bottom:4px}
+.fin-card .v{font-size:20px;font-weight:800;font-family:var(--mono)}
+.fin-card .v.save{color:var(--green)}
+.fin-card .v.spend{color:var(--text)}
+.fin-card .v.ratio{color:var(--cyan)}
+.fin-note{margin-top:16px;font-size:12px;color:var(--dim)}
+.fin-copy h2{font-size:34px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+.fin-copy>p{color:var(--muted);margin-bottom:26px}
+.fin-list{display:flex;flex-direction:column;gap:14px}
+.fin-item{display:flex;gap:13px;align-items:flex-start;font-size:14.5px;color:var(--muted)}
+.fin-item .b{color:var(--green);font-weight:800;flex-shrink:0}
+.fin-item b{color:var(--text)}
+
+/* ============ MISSION ============ */
+.mission{position:relative;overflow:hidden}
+.mission .glowm{position:absolute;width:600px;height:600px;border-radius:50%;background:var(--primary2);filter:blur(160px);opacity:.14;top:-200px;left:50%;transform:translateX(-50%)}
+.mission-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+.mcard{
+  text-align:center;padding:40px 28px;border-radius:var(--radius);
+  background:linear-gradient(180deg,var(--panel),transparent);border:1px solid var(--border);
+  transition:transform .25s,border-color .25s;
+}
+.mcard:hover{transform:translateY(-4px);border-color:var(--border2)}
+.mcard .glyph{font-size:34px;margin-bottom:18px;display:block}
+.mcard h3{font-size:20px;font-weight:800;margin-bottom:10px;letter-spacing:.02em}
+.mcard .en{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);margin-bottom:14px;font-weight:600}
+.mcard p{font-size:14px;color:var(--muted)}
+.mission-quote{
+  text-align:center;margin-top:56px;font-size:22px;font-weight:600;letter-spacing:-.01em;position:relative;
+}
+.mission-quote .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ============ ENTERPRISE ============ */
+.enterprise{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.ent-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ent-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:26px;transition:border-color .2s}
+.ent-card:hover{border-color:var(--border2)}
+.ent-card .ic{font-size:22px;margin-bottom:14px;display:block}
+.ent-card h4{font-size:15.5px;font-weight:700;margin-bottom:8px}
+.ent-card p{font-size:13px;color:var(--muted)}
+
+/* ============ PRICING ============ */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price-card{
+  background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:34px 30px;
+  display:flex;flex-direction:column;position:relative;
+}
+.price-card.featured{border-color:var(--primary);box-shadow:0 0 0 1px rgba(91,124,250,.3),0 20px 60px rgba(91,124,250,.15)}
+.price-card .pop{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--grad);color:#fff;font-size:11.5px;font-weight:700;padding:5px 16px;border-radius:100px;letter-spacing:.05em;
+}
+.price-card h3{font-size:18px;font-weight:700}
+.price-card .desc{font-size:13.5px;color:var(--muted);margin:8px 0 22px}
+.price-num{display:flex;align-items:baseline;gap:6px;margin-bottom:26px;flex-wrap:wrap}
+.price-num .amount{font-size:42px;font-weight:800;letter-spacing:-.03em}
+.price-num .unit{font-size:13px;color:var(--dim)}
+.price-feats{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:30px;flex:1}
+.price-feats li{font-size:13.5px;color:var(--muted);display:flex;gap:10px}
+.price-feats li::before{content:"✓";color:var(--green);font-weight:800}
+.price-feats li.no{opacity:.45}
+.price-feats li.no::before{content:"—";color:var(--dim)}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;color:var(--text);
+  font-family:var(--font);font-size:15.5px;font-weight:600;padding:20px 24px;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-q .arr{transition:transform .25s;color:var(--dim);font-size:13px;flex-shrink:0}
+.faq-item.open .faq-q .arr{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 20px;font-size:14px;color:var(--muted)}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--bg2);border-top:1px solid var(--border)}
+.contact-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+.contact-form{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:32px;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-field{display:flex;flex-direction:column;gap:7px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:13px;font-weight:600;color:var(--muted)}
+.form-field input,.form-field select,.form-field textarea{
+  background:var(--panel2);border:1px solid var(--border2);border-radius:9px;
+  padding:12px 14px;color:var(--text);font-size:14px;font-family:var(--font);outline:none;
+  transition:border-color .2s;width:100%;
+}
+.form-field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--dim) 50%),linear-gradient(135deg,var(--dim) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat}
+.form-field textarea{resize:vertical;min-height:120px}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--primary)}
+.form-field input::placeholder,.form-field textarea::placeholder{color:var(--dim)}
+.form-note{font-size:12px;color:var(--dim);margin-top:12px}
+.contact-info{display:flex;flex-direction:column;gap:14px}
+.info-card{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:22px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.info-card .ic{font-size:20px;line-height:1.4}
+.info-card h4{font-size:14.5px;font-weight:700;margin-bottom:3px}
+.info-card p{font-size:13px;color:var(--muted)}
+.info-card a.mail{color:var(--cyan);font-family:var(--mono);font-size:13.5px}
+.info-card a.mail:hover{text-decoration:underline}
+@media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+
+/* ============ CTA ============ */
+.cta-box{
+  position:relative;border-radius:24px;overflow:hidden;text-align:center;
+  background:linear-gradient(135deg,rgba(91,124,250,.16),rgba(139,92,246,.14),rgba(34,211,238,.12));
+  border:1px solid var(--border2);padding:80px 40px;
+}
+.cta-box h2{font-size:38px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+.cta-box p{color:var(--muted);max-width:560px;margin:0 auto 34px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--border);background:var(--bg2);padding:64px 0 36px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-brand p{font-size:13.5px;color:var(--muted);margin-top:14px;max-width:300px}
+.foot-col h5{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px}
+.foot-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:10px;transition:color .2s}
+.foot-col a:hover{color:var(--text)}
+.foot-bottom{
+  border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;
+  align-items:center;font-size:12.5px;color:var(--dim);flex-wrap:wrap;gap:12px;
+}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.vis{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  h1{font-size:42px}
+  .hero-inner,.api-wrap,.finops-wrap{grid-template-columns:1fr;gap:40px}
+  .model-grid{grid-template-columns:repeat(2,1fr)}
+  .ent-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-cta .btn-ghost{display:none}
+  h1{font-size:34px}
+  section{padding:64px 0}
+  .cap-grid,.model-grid,.mission-cards,.price-grid,.ent-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:none;border-bottom:1px solid var(--border)}
+  .sec-head h2{font-size:28px}
+  .fin-results{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">T</div>
+      <span>Token<em>Native</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#models">Model Hub</a>
+      <a href="#api">Unified API</a>
+      <a href="#finops">Token FinOps</a>
+      <a href="#mission">Mission</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact-form">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switch" aria-label="Language switcher">
+        <a href="index.html" class="active">EN</a>
+        <a href="zh/" lang="zh-Hans">中文</a>
+        <a href="it/" lang="it">IT</a>
+      </div>
+      <a href="#contact" class="btn btn-ghost">Sign in</a>
+      <a href="#contact" class="btn btn-primary">Get started free</a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="grid-bg"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+  <div class="container hero-inner">
+    <div>
+      <div class="badge"><span class="dot"></span><b>200+ leading AI models</b> integrated · one API for all</div>
+      <h1>Make every token<br><span class="grad">count</span></h1>
+      <p class="hero-sub">
+        TokenNative delivers a <b>one-stop AI Token service</b> for enterprises: aggregation &amp; distribution, intelligent routing, Token governance and Token FinOps.
+        Integrate once, dispatch intelligently across the entire model landscape — lower costs, better experience.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">Get your free API key →</a>
+        <a href="#finops" class="btn btn-ghost btn-lg">Estimate my savings</a>
+      </div>
+      <div class="hero-mission">
+        <span><span class="mk">◈</span> Accessible</span>
+        <span><span class="mk">◈</span> Universal</span>
+        <span><span class="mk">◈</span> Equitable</span>
+      </div>
+    </div>
+
+    <div class="terminal reveal">
+      <div class="term-bar">
+        <span class="c" style="background:#ff5f57"></span>
+        <span class="c" style="background:#febc2e"></span>
+        <span class="c" style="background:#28c840"></span>
+        <span class="title">tokennative — playground</span>
+      </div>
+      <div class="term-body">
+        <div><span class="cm">// One call, automatically routed to the best model</span></div>
+        <div><span class="kw">POST</span> https://api.tokennative.ai/v1/chat/completions</div>
+        <div>&nbsp;</div>
+        <div>{</div>
+        <div>&nbsp;&nbsp;<span class="str">"model"</span>: <span class="str">"auto"</span>,</div>
+        <div>&nbsp;&nbsp;<span class="str">"routing"</span>: { <span class="str">"strategy"</span>: <span class="str">"cost-optimized"</span> },</div>
+        <div>&nbsp;&nbsp;<span class="str">"messages"</span>: [{ <span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: <span class="str">"..."</span> }]</div>
+        <div>}</div>
+        <div class="term-route">
+          <div class="route-line"><span class="cm">▸ Routing decision</span><span class="lat">2.1 ms</span></div>
+          <div class="route-line"><span class="model">deepseek-v3.2</span><span class="lat route-ok">✓ selected · best cost</span></div>
+          <div class="route-line"><span class="model">qwen3-max</span><span class="lat route-best">fallback · latency +38ms</span></div>
+          <div class="route-line"><span class="model">gpt-5.2</span><span class="lat">fallback · cost ×8.4</span></div>
+          <div class="route-line"><span style="color:var(--green)">✓ 200 OK</span><span class="lat route-ok">91.2% cost saved</span><span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats-band">
+  <div class="container stats-grid">
+    <div class="stat"><div class="num" data-count="200" data-suffix="+">0</div><div class="lbl">Models integrated</div></div>
+    <div class="stat"><div class="num" data-count="99.99" data-suffix="%" data-decimals="2">0</div><div class="lbl">Platform availability SLA</div></div>
+    <div class="stat"><div class="num" data-count="42" data-suffix="%">0</div><div class="lbl">Average cost savings</div></div>
+    <div class="stat"><div class="num" data-count="38" data-suffix="B">0</div><div class="lbl">Tokens routed daily</div></div>
+  </div>
+</div>
+
+<!-- ================= WHAT IS (GEO answer block) ================= -->
+<section id="what-is">
+  <div class="container">
+    <article class="answer-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <h2>What is TokenNative?</h2>
+      <p itemprop="description"><strong>TokenNative is an enterprise AI token platform that aggregates, routes, distributes and governs AI tokens.</strong> It unifies 200+ large language models — GPT, Claude, Gemini, DeepSeek, Qwen, GLM, Llama and more — behind a single OpenAI-compatible API, then intelligently routes every request to the best-value model in real time.</p>
+      <p class="muted">For engineering teams it replaces a dozen provider integrations with one endpoint; for finance teams it turns token spend into a managed, attributed, forecastable cost line — Token FinOps. TokenNative's mission is to make AI tokens accessible, universal and equitable.</p>
+      <div class="ans-facts">
+        <div><b>Token aggregation &amp; distribution</b>200+ models, one OpenAI-compatible API, pooled procurement pricing</div>
+        <div><b>Intelligent token routing</b>auto / cost / latency / quality strategies, semantic caching, auto failover</div>
+        <div><b>Token governance</b>three-tier quotas, audit logs, key lifecycle, anomaly detection</div>
+        <div><b>Token FinOps</b>cost attribution, budget caps, prompt compression, monthly reports</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= CAPABILITIES ================= -->
+<section id="capabilities">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Core Capabilities</div>
+      <h2>Four core capabilities covering the full token lifecycle</h2>
+      <p>From onboarding and scheduling to governance and cost operations — TokenNative is the Token layer of your enterprise AI infrastructure.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap reveal">
+        <span class="en-mark">Aggregation</span>
+        <div class="cap-icon">🌐</div>
+        <h3>Token Aggregation &amp; Distribution</h3>
+        <p>Aggregate 200+ leading models and inference providers worldwide behind one OpenAI-compatible API — integrate once, reach them all.</p>
+        <ul>
+          <li>OpenAI-compatible API, zero-code migration</li>
+          <li>Multi-provider redundancy with automatic failover</li>
+          <li>Canary distribution by model, provider and region</li>
+          <li>Pooled token procurement at enterprise scale</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <span class="en-mark">Routing</span>
+        <div class="cap-icon">🧭</div>
+        <h3>Intelligent Token Routing</h3>
+        <p>Real-time dispatch based on task difficulty, cost, latency and availability — every request lands on the model that serves it best.</p>
+        <ul>
+          <li>auto mode: model selection by task complexity</li>
+          <li>Cost-first / latency-first / quality-first strategies</li>
+          <li>Fallback &amp; circuit breaking, 99.99% availability</li>
+          <li>Semantic cache hits return instantly — zero inference</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <span class="en-mark">Governance</span>
+        <div class="cap-icon">🛡️</div>
+        <h3>Token Governance</h3>
+        <p>Establish enterprise-wide token policies: who can use what, how much, and how — fully controllable, auditable and traceable.</p>
+        <ul>
+          <li>Three-tier quota system: team / project / individual</li>
+          <li>Sensitive-content gateway &amp; compliance audit logs</li>
+          <li>Full key lifecycle management with fine-grained permissions</li>
+          <li>Usage anomaly detection with real-time alerting</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <span class="en-mark">FinOps</span>
+        <div class="cap-icon">📊</div>
+        <h3>Token FinOps</h3>
+        <p>Run tokens as a financial asset: full cost visibility, attribution to teams, manageable budgets and recoverable waste.</p>
+        <ul>
+          <li>Token cost dashboard attributed by team / application</li>
+          <li>Hard budget caps with automatic downgrade on overrun</li>
+          <li>Prompt compression &amp; caching optimization advice</li>
+          <li>Monthly FinOps reports and cost forecasting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODELS ================= -->
+<section id="models" class="models">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Model Hub</div>
+      <h2>Model Hub</h2>
+      <p>World-class models with unified billing and a single interface. Prices keep dropping thanks to TokenNative's pooled procurement.</p>
+    </div>
+    <div class="model-toolbar reveal">
+      <button class="chip active" data-cat="all">All</button>
+      <button class="chip" data-cat="flagship">Flagship</button>
+      <button class="chip" data-cat="cost">Best value</button>
+      <button class="chip" data-cat="multimodal">Multimodal</button>
+      <button class="chip" data-cat="embed">Embedding</button>
+    </div>
+    <div class="model-grid reveal" id="modelGrid"></div>
+    <p style="text-align:center;margin-top:32px;color:var(--dim);font-size:13.5px">
+      Core models shown as examples · 200+ models on the platform, updated in real time in the console
+    </p>
+  </div>
+</section>
+
+<!-- ================= API ================= -->
+<section id="api">
+  <div class="container api-wrap">
+    <div class="api-copy reveal">
+      <div class="sec-tag" style="text-align:left">Unified API</div>
+      <h2>One API, every model</h2>
+      <p>Fully compatible with the OpenAI API spec — change one line of base_url and you're migrated. SDKs, streaming, function calling and structured output all included.</p>
+      <div class="api-points">
+        <div class="api-point">
+          <div class="ic">⚡</div>
+          <div><h4>Integrate in 3 minutes</h4><p>Grab a key, swap the base_url, and call 200+ models right away.</p></div>
+        </div>
+        <div class="api-point">
+          <div class="ic">🔀</div>
+          <div><h4>auto intelligent routing</h4><p>Set model to "auto" and let TokenNative pick the optimal model — cost and quality in balance.</p></div>
+        </div>
+        <div class="api-point">
+          <div class="ic">📈</div>
+          <div><h4>Elastic unlimited concurrency</h4><p>Platform-level pooling and multi-provider scheduling — peak traffic is never throttled by a single provider's limits.</p></div>
+        </div>
+        <div class="api-point">
+          <div class="ic">🧾</div>
+          <div><h4>Unified billing &amp; monitoring</h4><p>Usage, latency and cost for all models in a single dashboard.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="code-shell reveal">
+      <div class="code-tabs">
+        <button class="code-tab active" data-lang="python">Python</button>
+        <button class="code-tab" data-lang="node">Node.js</button>
+        <button class="code-tab" data-lang="curl">cURL</button>
+      </div>
+      <div class="code-panel active" data-lang="python"><pre><span class="kw">from</span> openai <span class="kw">import</span> OpenAI
+
+client = OpenAI(
+    api_key=<span class="str">"tkn-sk-..."</span>,
+    base_url=<span class="str">"https://api.tokennative.ai/v1"</span>  <span class="cm"># the only line you change</span>
+)
+
+resp = client.chat.completions.create(
+    model=<span class="str">"auto"</span>,                          <span class="cm"># intelligently routed</span>
+    messages=[
+        {<span class="str">"role"</span>: <span class="str">"user"</span>,
+         <span class="str">"content"</span>: <span class="str">"Write a pricing strategy analysis for my SaaS"</span>}
+    ],
+    <span class="fn">routing</span>={<span class="str">"strategy"</span>: <span class="str">"cost-optimized"</span>},
+)
+<span class="fn">print</span>(resp.model)      <span class="cm"># actual: deepseek-v3.2</span>
+<span class="fn">print</span>(resp.choices[<span class="num">0</span>].message.content)</pre></div>
+      <div class="code-panel" data-lang="node"><pre><span class="kw">import</span> OpenAI <span class="kw">from</span> <span class="str">"openai"</span>;
+
+<span class="kw">const</span> client = <span class="kw">new</span> OpenAI({
+  apiKey: <span class="str">"tkn-sk-..."</span>,
+  baseURL: <span class="str">"https://api.tokennative.ai/v1"</span>, <span class="cm">// one-line migration</span>
+});
+
+<span class="kw">const</span> resp = <span class="kw">await</span> client.chat.completions.create({
+  model: <span class="str">"auto"</span>,                      <span class="cm">// intelligent routing</span>
+  messages: [
+    { role: <span class="str">"user"</span>, content: <span class="str">"Summarize the key points of this quarterly report"</span> },
+  ],
+  routing: { strategy: <span class="str">"latency-optimized"</span> },
+});
+
+console.<span class="fn">log</span>(resp.model);      <span class="cm">// actual: qwen3-max</span></pre></div>
+      <div class="code-panel" data-lang="curl"><pre>curl https://api.tokennative.ai/v1/chat/completions \
+  -H <span class="str">"Authorization: Bearer tkn-sk-..."</span> \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{
+    "model": "auto",
+    "routing": { "strategy": "quality-optimized" },
+    "messages": [
+      { "role": "user", "content": "Hello, introduce yourself" }
+    ]
+  }'</span>
+
+<span class="cm"># Response includes the routed model and cost breakdown</span></pre></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINOPS ================= -->
+<section id="finops" class="finops">
+  <div class="container finops-wrap">
+    <div class="fin-copy reveal">
+      <div class="sec-tag" style="text-align:left">Token FinOps</div>
+      <h2>Run the numbers: what could you save?</h2>
+      <p>Drag the sliders to simulate your workload and see the impact of TokenNative intelligent routing and FinOps optimization.</p>
+      <div class="fin-list">
+        <div class="fin-item"><span class="b">−</span><span><b>Smart down-routing</b>: routine tasks are automatically routed to cost-efficient models with virtually no quality loss.</span></div>
+        <div class="fin-item"><span class="b">−</span><span><b>Semantic caching</b>: similar questions hit the cache — inference cost drops to zero.</span></div>
+        <div class="fin-item"><span class="b">−</span><span><b>Prompt compression</b>: system prompts are slimmed automatically, cutting input tokens by ~30% on average.</span></div>
+        <div class="fin-item"><span class="b">+</span><span><b>Pooled procurement</b>: platform-wide volume buying means unit prices below direct purchasing.</span></div>
+      </div>
+    </div>
+    <div class="fin-panel reveal">
+      <div class="fin-row">
+        <label>Monthly request volume <b id="lblReq">50M requests/month</b></label>
+        <input type="range" id="rReq" min="1" max="100" value="25">
+      </div>
+      <div class="fin-row">
+        <label>Avg. output tokens / request <b id="lblTok">800</b></label>
+        <input type="range" id="rTok" min="100" max="4000" step="50" value="800">
+      </div>
+      <div class="fin-row">
+        <label>Current direct rate <b id="lblPrice">¥4.0 / M tokens</b></label>
+        <input type="range" id="rPrice" min="1" max="80" value="40">
+      </div>
+      <div class="fin-results">
+        <div class="fin-card"><div class="k">Current monthly cost (est.)</div><div class="v spend" id="vNow">¥—</div></div>
+        <div class="fin-card"><div class="k">With TokenNative</div><div class="v save" id="vAfter">¥—</div></div>
+        <div class="fin-card"><div class="k">Monthly savings</div><div class="v save" id="vSave">¥—</div></div>
+        <div class="fin-card"><div class="k">Overall cost reduction</div><div class="v ratio" id="vRatio">—%</div></div>
+      </div>
+      <p class="fin-note">* Based on typical customer routing distributions (~65% of traffic routed to cost-efficient models + ~15% semantic cache hit rate). Actual savings vary by workload.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MISSION ================= -->
+<section id="mission">
+  <div class="glowm"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Our Mission</div>
+      <h2>Accessible, universal, equitable tokens</h2>
+      <p>Intelligence shouldn't be locked behind compute barriers. TokenNative believes tokens are the "water and electricity" of the digital age — available to everyone.</p>
+    </div>
+    <div class="mission-cards">
+      <div class="mcard reveal">
+        <span class="glyph">🌍</span>
+        <h3>Accessible</h3>
+        <div class="en">普惠</div>
+        <p>Pooled procurement plus intelligent routing push model costs to the floor — startups and students can afford flagship models, and great ideas no longer die over budget.</p>
+      </div>
+      <div class="mcard reveal">
+        <span class="glyph">🚀</span>
+        <h3>Universal</h3>
+        <div class="en">普及</div>
+        <p>One API key, one line of config, every model in reach — lowering the barrier of "using AI" from engineering teams to every individual, bringing tokens to every industry.</p>
+      </div>
+      <div class="mcard reveal">
+        <span class="glyph">⚖️</span>
+        <h3>Equitable</h3>
+        <div class="en">平权</div>
+        <p>Whether you're an indie developer or a Fortune 500 company, you get the same models, the same latency, the same price. Before compute, everyone is equal.</p>
+      </div>
+    </div>
+    <p class="mission-quote reveal">
+      "We don't just distribute tokens — we distribute the <span class="grad">admission ticket to the intelligence era</span>."
+    </p>
+  </div>
+</section>
+
+<!-- ================= ENTERPRISE ================= -->
+<section id="enterprise" class="enterprise">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Enterprise Ready</div>
+      <h2>Built for organizations at scale</h2>
+      <p>From security and compliance to private deployment, TokenNative meets every requirement large organizations place on AI infrastructure.</p>
+    </div>
+    <div class="ent-grid">
+      <div class="ent-card reveal"><span class="ic">🔐</span><h4>Private / dedicated cloud</h4><p>VPC-dedicated instances and on-prem deployment keep token traffic inside your enterprise boundary.</p></div>
+      <div class="ent-card reveal"><span class="ic">📋</span><h4>Security &amp; compliance</h4><p>ISO 27001, encrypted data in transit and at rest, end-to-end audit logs.</p></div>
+      <div class="ent-card reveal"><span class="ic">🤝</span><h4>Dedicated customer success</h4><p>1-on-1 solution architects supporting model selection, migration and FinOps strategy end to end.</p></div>
+      <div class="ent-card reveal"><span class="ic">♾️</span><h4>99.99% SLA</h4><p>Multi-region disaster recovery and provider failover — token supply as reliable as utilities.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Pricing</div>
+      <h2>Simple, transparent pricing</h2>
+      <p>Pay per use for models — TokenNative charges only a minimal platform fee, because accessibility starts with transparency.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <h3>Free</h3>
+        <div class="desc">For individual developers and exploration</div>
+        <div class="price-num"><span class="amount">¥0</span><span class="unit">/ month</span></div>
+        <ul class="price-feats">
+          <li>1M free tokens credited on signup</li>
+          <li>All 200+ models available</li>
+          <li>Basic auto intelligent routing</li>
+          <li>Community support</li>
+          <li class="no">Token governance policies</li>
+          <li class="no">FinOps cost dashboard</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Get started</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="pop">Most popular</div>
+        <h3>Pro</h3>
+        <div class="desc">For growing teams and productized workloads</div>
+        <div class="price-num"><span class="amount">¥99</span><span class="unit">/ month · incl. ¥500 token credit</span></div>
+        <ul class="price-feats">
+          <li>Model prices from 80% of list price</li>
+          <li>All routing strategies (cost / latency / quality)</li>
+          <li>Semantic caching &amp; prompt compression</li>
+          <li>Team quotas &amp; key management</li>
+          <li>FinOps dashboard + usage alerts</li>
+          <li>Weekday ticket support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Upgrade to Pro</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Enterprise</h3>
+        <div class="desc">For scaled enterprises and regulated industries</div>
+        <div class="price-num"><span class="amount">Custom</span><span class="unit">volume-tiered token pricing</span></div>
+        <ul class="price-feats">
+          <li>Exclusive enterprise volume discounts</li>
+          <li>Private / VPC-dedicated deployment</li>
+          <li>Token governance &amp; compliance audit suite</li>
+          <li>Dedicated FinOps reports &amp; optimization service</li>
+          <li>99.99% SLA with priority support channel</li>
+          <li>1-on-1 solution architect</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Contact sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">FAQ</div>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">How is TokenNative different from buying directly from model providers?<span class="arr">▼</span></button>
+        <div class="faq-a"><p>Going direct means integrating every provider's API, juggling multiple keys, negotiating prices separately and handling single points of failure. TokenNative aggregates 200+ models behind one API, adds platform-level redundancy and a unified bill — and thanks to pooled procurement, unit prices are typically below list. On top of that you get routing, governance and FinOps as enterprise-grade features.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does auto intelligent routing decide? Will it hurt answer quality?<span class="arr">▼</span></button>
+        <div class="faq-a"><p>The routing engine weighs task semantic complexity, real-time model latency, cost and historical quality scores: routine tasks (rewriting, summarization, classification) go to cost-efficient models, while complex tasks (deep reasoning, code generation) stay on flagship models. Enterprises can also set a "quality floor" so critical workloads always use designated models.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is my business data secure?<span class="arr">▼</span></button>
+        <div class="faq-a"><p>All requests are encrypted with TLS by default, and the platform never trains models on customer data. Private and VPC-dedicated deployments keep token traffic inside your enterprise boundary, with end-to-end audit logs to satisfy ISO 27001 and other compliance frameworks.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to rewrite code to migrate from an existing OpenAI integration?<span class="arr">▼</span></button>
+        <div class="faq-a"><p>No re-architecture needed. TokenNative is fully compatible with the OpenAI API spec — usually just point base_url to api.tokennative.ai and swap in your API Key. Mainstream SDKs (OpenAI / LangChain / LlamaIndex, etc.) work out of the box.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does a Token FinOps report include?<span class="arr">▼</span></button>
+        <div class="faq-a"><p>Cost attribution by team / application / model, top-spending prompt analysis, cache hit rates, an optimization checklist (traffic that can be down-routed, prompts that can be compressed), month-over-month trends and next-month cost forecasts. Enterprise plans add one-on-one optimization reviews with an architect.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Hand your tokens to <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">TokenNative</span></h2>
+      <p>Sign up and get 1M free tokens. Integrate 200+ models in 3 minutes and start your journey toward accessible, universal, equitable tokens.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-primary btn-lg">Sign up free</a>
+        <a href="#" class="btn btn-ghost btn-lg">Book a demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact-form" class="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Contact</div>
+      <h2>Talk to us</h2>
+      <p>Questions about routing strategies, pricing or enterprise deployment? Send us a message — we reply within one business day.</p>
+    </div>
+    <div class="contact-wrap">
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="cf-name">Name *</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Email *</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-company">Company</label>
+            <input type="text" id="cf-company" name="company" placeholder="Company name (optional)">
+          </div>
+          <div class="form-field">
+            <label for="cf-topic">Topic *</label>
+            <select id="cf-topic" name="topic" required>
+              <option value="Sales">Sales &amp; pricing</option>
+              <option value="Technical">Technical support</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="cf-message">Message *</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us about your use case, monthly token volume, or the models you'd like to route across..." required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send message ✉</button>
+        <p class="form-note">Submitting opens your email client with the message pre-filled to <b>info@tokennative.ai</b>. We reply within 1 business day.</p>
+      </form>
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <span class="ic">📮</span>
+          <div>
+            <h4>General inquiries</h4>
+            <p>For any questions about the platform</p>
+            <a class="mail" href="mailto:info@tokennative.ai">info@tokennative.ai</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="ic">💼</span>
+          <div>
+            <h4>Sales &amp; enterprise</h4>
+            <p>Volume pricing, private deployment, POC</p>
+            <a class="mail" href="mailto:sales@tokennative.ai">sales@tokennative.ai</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="ic">🕒</span>
+          <div>
+            <h4>Response time</h4>
+            <p>Within 1 business day, Mon–Fri</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="ic">🌐</span>
+          <div>
+            <h4>Languages</h4>
+            <p>English · 中文 · Italiano</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo"><div class="logo-mark">T</div><span>Token<em>Native</em></span></a>
+        <p>The enterprise-grade one-stop AI Token platform. Aggregation &amp; distribution · intelligent routing · token governance · Token FinOps.</p>
+        <p style="margin-top:14px">Making intelligence as accessible, universal and equitable as tokens.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="#models">Model Hub</a>
+        <a href="#api">Unified API</a>
+        <a href="#finops">Token FinOps</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Developers</h5>
+        <a href="#">API docs</a>
+        <a href="#">Quick start</a>
+        <a href="#">Status page</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#mission">About us</a>
+        <a href="#">Careers</a>
+        <a href="#contact-form">Contact sales</a>
+        <a href="mailto:info@tokennative.ai">info@tokennative.ai</a>
+        <a href="#">Terms · Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 TokenNative. All rights reserved.</span>
+      <span>Accessible · Universal · Equitable</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== nav scroll ===== */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+
+/* ===== model data ===== */
+const MODELS=[
+  {name:'GPT-5.2',vendor:'OpenAI',tag:'Flagship',cat:'flagship',c1:'#10a37f',c2:'#0d8a6c',ini:'G',price:'42.0',hot:true},
+  {name:'Claude Sonnet 4.8',vendor:'Anthropic',tag:'Flagship',cat:'flagship',c1:'#d97757',c2:'#b85c3d',ini:'C',price:'28.5'},
+  {name:'Gemini 3 Pro',vendor:'Google',tag:'Multimodal',cat:'multimodal',c1:'#4285f4',c2:'#2f6ad0',ini:'G',price:'18.0'},
+  {name:'DeepSeek-V3.2',vendor:'DeepSeek',tag:'Best value',cat:'cost',c1:'#5b7cfa',c2:'#3d5cd6',ini:'D',price:'1.2',cheap:true,hot:true},
+  {name:'Qwen3-Max',vendor:'Alibaba Cloud',tag:'Flagship',cat:'flagship',c1:'#8b5cf6',c2:'#6d3fd6',ini:'Q',price:'9.6'},
+  {name:'GLM-5',vendor:'Zhipu AI',tag:'Best value',cat:'cost',c1:'#38bdf8',c2:'#0ea5e9',ini:'G',price:'2.0'},
+  {name:'Kimi K2.5',vendor:'Moonshot AI',tag:'Long context',cat:'cost',c1:'#14b8a6',c2:'#0d9488',ini:'K',price:'2.4',cheap:true},
+  {name:'Doubao-1.8-Pro',vendor:'ByteDance',tag:'Multimodal',cat:'multimodal',c1:'#6366f1',c2:'#4f46e5',ini:'D',price:'3.2'},
+  {name:'Llama 4 Maverick',vendor:'Meta',tag:'Open flagship',cat:'flagship',c1:'#0866ff',c2:'#0552c8',ini:'L',price:'4.8'},
+  {name:'GPT-5.2 Vision',vendor:'OpenAI',tag:'Multimodal',cat:'multimodal',c1:'#10a37f',c2:'#0d8a6c',ini:'G',price:'36.0'},
+  {name:'Qwen3-Embedding',vendor:'Alibaba Cloud',tag:'Embedding',cat:'embed',c1:'#f59e0b',c2:'#d97706',ini:'Q',price:'0.4'},
+  {name:'BGE-M3',vendor:'BAAI',tag:'Embedding',cat:'embed',c1:'#34d399',c2:'#059669',ini:'B',price:'0.2',cheap:true},
+];
+const grid=document.getElementById('modelGrid');
+function renderModels(cat){
+  grid.innerHTML=MODELS.filter(m=>cat==='all'||m.cat===cat).map(m=>`
+    <div class="model-card">
+      <div class="model-top">
+        <div class="model-avatar" style="background:linear-gradient(135deg,${m.c1},${m.c2})">${m.ini}</div>
+        <div><div class="model-name">${m.name}</div><div class="model-vendor">${m.vendor} · ${m.tag}</div></div>
+      </div>
+      <div class="model-tags">
+        ${m.hot?'<span class="mtag hot">🔥 Popular</span>':''}
+        ${m.cheap?'<span class="mtag cheap">💰 Best value</span>':''}
+        <span class="mtag">OpenAI compatible</span><span class="mtag">Streaming</span>
+      </div>
+      <div class="model-price">
+        <span>Output <b class="in">¥${m.price}</b> / M tokens</span>
+        <span>Input <b>¥${(parseFloat(m.price)/4).toFixed(2)}</b></span>
+      </div>
+    </div>`).join('');
+}
+renderModels('all');
+document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  ch.classList.add('active');
+  renderModels(ch.dataset.cat);
+}));
+
+/* ===== code tabs ===== */
+document.querySelectorAll('.code-tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.code-tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.code-panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelector(`.code-panel[data-lang="${t.dataset.lang}"]`).classList.add('active');
+}));
+
+/* ===== finops simulator ===== */
+function fmt(n){
+  if(n>=1e9)return (n/1e9).toFixed(2)+'B';
+  if(n>=1e6)return (n/1e6).toFixed(1)+'M';
+  if(n>=1e3)return (n/1e3).toFixed(1)+'K';
+  return Math.round(n).toLocaleString('en-US');
+}
+function fmtMoney(n){
+  if(n>=1e8)return '¥'+(n/1e8).toFixed(2)+'B';
+  if(n>=1e4)return '¥'+(n/1e4).toFixed(1)+'K';
+  return '¥'+Math.round(n).toLocaleString('en-US');
+}
+function paint(el){
+  const pct=(el.value-el.min)/(el.max-el.min)*100;
+  el.style.setProperty('--fill',pct+'%');
+}
+function calcFin(){
+  const req=document.getElementById('rReq'),tok=document.getElementById('rTok'),price=document.getElementById('rPrice');
+  [req,tok,price].forEach(paint);
+  const baseReq=2e6;                            // 2M calls @ value 1
+  const reqN=baseReq*req.value;                 // calls/month
+  const tokN=+tok.value;                        // tokens per call (output)
+  const priceN=price.value/10;                  // ¥ / million tokens
+  const tokensPerCall=tokN*3.5;                 // assume input ≈ output × 2.5
+  const costNow=reqN*tokensPerCall/1e6*priceN;
+  const routedRatio=0.65;                       // 65% routed to cheap models at ~22% price
+  const cacheHit=0.15;                          // 15% served by semantic cache
+  const costAfter=costNow*(1-cacheHit)*(1-routedRatio*(1-0.22))*(1-0.10)*0.8; // 10% prompt compression, 80% platform rate
+  document.getElementById('lblReq').textContent=fmt(reqN)+' requests/month';
+  document.getElementById('lblTok').textContent=tokN;
+  document.getElementById('lblPrice').textContent='¥'+priceN.toFixed(1)+' / M tokens';
+  document.getElementById('vNow').textContent=fmtMoney(costNow);
+  document.getElementById('vAfter').textContent=fmtMoney(costAfter);
+  document.getElementById('vSave').textContent=fmtMoney(costNow-costAfter);
+  const ratio=(1-costAfter/costNow)*100;
+  document.getElementById('vRatio').textContent=ratio.toFixed(1)+'%';
+}
+['rReq','rTok','rPrice'].forEach(id=>document.getElementById(id).addEventListener('input',calcFin));
+calcFin();
+
+/* ===== contact form (mailto) ===== */
+const cform=document.getElementById('contactForm');
+if(cform){cform.addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=cform.elements;
+  const topic=f['topic'].value,name=f['name'].value.trim(),email=f['email'].value.trim(),
+        company=f['company'].value.trim(),msg=f['message'].value.trim();
+  if(!name||!email||!msg){alert('Please fill in name, email and message.');return;}
+  const subject=encodeURIComponent('[TokenNative]['+topic+'] Inquiry from '+(name||'website'));
+  const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nCompany: '+(company||'-')+'\nTopic: '+topic+'\n\n'+msg+'\n');
+  window.location.href='mailto:info@tokennative.ai?subject='+subject+'&body='+body;
+});}
+
+/* ===== faq ===== */
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+/* ===== scroll reveal ===== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== counter ===== */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,target=+el.dataset.count,dec=+(el.dataset.decimals||0),suf=el.dataset.suffix||'';
+  const t0=performance.now(),dur=1400;
+  (function step(t){
+    const p=Math.min((t-t0)/dur,1),ease=1-Math.pow(1-p,3),v=target*ease;
+    el.textContent=v.toFixed(dec)+suf;
+    if(p<1)requestAnimationFrame(step);
+  })(t0);
+  cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
